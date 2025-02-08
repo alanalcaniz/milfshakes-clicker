@@ -1,0 +1,81 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --red-milfshakes: rgb(239,20,33);
+    --rojo-oscuro: rgb(183,5,5);
+    --white-shake: #f3f3f3;
+}
+
+body{
+    font-family: "Geologica", serif;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 3fr 4fr 2fr;
+    grid-template-rows: 30px auto auto 120px;
+    height: 100vh;
+}
+
+.section-advise{
+    background: var(--rojo-oscuro);
+    grid-area: 1/1/2/4;
+    color: white;
+    font-weight: 800;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}  
+
+.section-shop{
+    background: var(--white-shake);
+    grid-area: 2/1/5/2;
+}
+
+.section-milfo{
+    background-color: rgb(109, 175, 230);
+    grid-area: 2/2/4/3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.milfo-clicker{
+    height: 600px;
+    width: 80%;
+    background-color: white;
+    transition: transform .5s ease;
+}
+
+.milfo-clicker:hover{
+    transform: scale(1.03);
+}
+
+.section-points{
+    grid-area: 4/2/5/3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.points-counter{
+    background: var(--red-milfshakes);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 200px;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+}
+
+.section-level-up{
+    background: var(--red-milfshakes);
+    grid-area: 2/3/5/4;
+}
