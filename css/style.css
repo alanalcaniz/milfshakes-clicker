@@ -33,7 +33,7 @@ main{
 }  
 
 .section-shop{
-    background: var(--white-shake);
+    background: var(--red-milfshakes);
     grid-area: 2/1/5/2;
 }
 
