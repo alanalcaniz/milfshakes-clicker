@@ -12,11 +12,12 @@
 
 body{
     font-family: "Geologica", serif;
+    overflow: hidden;
 }
 
 main{
     display: grid;
-    grid-template-columns: 3fr 4fr 2fr;
+    grid-template-columns: 3fr 5fr 1.8fr;
     grid-template-rows: 30px auto auto 120px;
     height: 100vh;
 }
@@ -35,28 +36,91 @@ main{
 .section-shop{
     background: var(--red-milfshakes);
     grid-area: 2/1/5/2;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+.section-shop::-webkit-scrollbar {
+    display: none; 
 }
 
 .div-levels{
-    height: 200px;
-    width: 70%; 
-    margin: 30px;
+    min-width: 300px;
+    width: 80%;
+    margin: 13px 30px;
     background-color: white; 
-    border: 3px solid rgb(255, 0, 0); 
-    outline: 3px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    flex-flow: column;
+}
+
+.level{
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    left: 87%;
+    top: -20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+    font-size: 18px;
+    background: white;
+    border-radius: 20px;
+    border: 2px solid black;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: "Geologica", sans-serif;
+    font-weight: 700;
+}
+
+.drop_img{
+    width: auto;
+    height: 70%;
+    background-color: aqua;
+    margin: 15px 10px 10px 10px;
+    overflow: hidden;
+    border-radius: 16px;
+    outline: 2px solid rgb(54, 54, 54);
+}
+
+.drop_img img{
+    object-fit: cover;
+    width: 100%;
+}
+
+.drop_img:hover img{
+    transform: scale(1.05);
+}
+
+.drop_names{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+    font-size: 18px;
+    font-family: "Geologica", sans-serif;
+    font-weight: 700;
 }
 
 .section-milfo{
     background-color: rgb(109, 175, 230);
     grid-area: 2/2/5/3;
     display: flex;
-    overflow: hidden;
     position: relative;
+    overflow: hidden;
 }
+
 /* imagenes milfo */
 .milfo-img{
     object-fit: cover;
-    height: 100%;
+    height: 100vh;
     width: 100%;
     position: absolute;
 }
@@ -94,13 +158,12 @@ main{
     align-items: center;
 }
 
-.milfo-hit-box{
+#milfo-hit-box{
     height: 85%;
     margin-top: 60px;
     width: 60%;
-    background-color: rgba(0, 0, 255, 0.308);
 }
-.milfo-hit-box:hover ~ .milfo-img-2{
+.section-milfo:hover .milfo-img-2{
     transform: scale(1.03);
 }
 
@@ -124,6 +187,12 @@ main{
     border: 3px solid var(--white-shake);
     outline: 3px solid var(--red-milfshakes);
     border-radius: 20px;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    color: white;
+    justify-content: center;
+    align-items: center;
 }
 
 .section-level-up{
@@ -136,7 +205,24 @@ main{
 
 .buy-drop{
     width: 95%;
-    height: 130px;
+    height: auto;
     background-color: var(--white-shake);
     border-bottom: 3px solid var(--rojo-oscuro);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    padding: 4px;
+    justify-content: space-evenly;
+    margin-top: 7px;
+}
+
+.shop-item{
+    height: 70px;
+    width: 70px;
+    border: none;
+}
+
+.img-shop{
+    height: 100%; 
+    width: 100%;
 }

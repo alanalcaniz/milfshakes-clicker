@@ -9,14 +9,37 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <main>
+        <!-- Header de la web -->
         <section class="section-advise">
             <p>NOT AN OFFICIAL M***SHAKES WEB</p>
         </section>
+        <!-- Apartado drops MilfShakes -->
         <section class="section-shop">
-            <div class="div-levels"></div>
+            <button class="div-levels">
+                <div class="level"><p>0</p></div>
+                <div class="drop_img"><img src="img/drops_1.png" alt=""></div>
+                <div class="drop_names"><p>001 - Hot Milfs</p></div>
+            </button>
+            <button class="div-levels">
+                <div class="level"><p>0</p></div>
+                <div class="drop_img"><img src="img/drops_2.png" alt=""></div>
+                <div class="drop_names"><p>002 - Cherry's</p></div>
+            </button>
+            <button class="div-levels">
+                <div class="level"><p>0</p></div>
+                <div class="drop_img"><img src="img/drops_3.png" alt=""></div>
+                <div class="drop_names"><p>003 - Air Wish</p></div>
+            </button>
+            <button class="div-levels">
+                <div class="level"><p>0</p></div>
+                <div class="drop_img"><img src="img/drops_4.png" alt=""></div>
+                <div class="drop_names"><p>004 - Milfo</p></div>
+            </button>
         </section>
+        <!-- Apartado milfo clickable -->
         <section class="section-milfo">
             <img src="img/milfoclickv1_capa1.png" class="milfo-img milfo-img-1" alt="">
             <img src="img/milfoclickv1_capa2.png" class="milfo-img milfo-img-2" alt="">
@@ -25,16 +48,44 @@
             <img src="img/milfoclickv1_capa5.png" class="milfo-img milfo-img-5" alt="">
             <img src="img/milfoclickv1_capa6.png" class="milfo-img milfo-img-6" alt="">
             <div class="milfo-layer" >
-                <div class="section-milfo__clicker" style="background-color: rgba(255, 0, 234, 0.356);">
-                    <div class="milfo-hit-box"></div><!-- hitbox para el milfo -->
+                <div class="section-milfo__clicker">
+                    <div id="milfo-hit-box"></div><!-- hitbox para el milfo -->
                 </div>
                 <div class="points-counter">
-                    <div class="counter"></div>
+                    <div class="counter">
+                        <p id="milfo-points">0</p>
+                    </div>
                 </div><!-- puntuacion -->
             </div>
         </section>
+        <!-- Apartado Tienda Items -->
         <section class="section-level-up">
-            <div class="buy-drop"></div>
+            <div class="buy-drop">
+                <button class="shop-item" id="bt-1">
+                    <img id="bt-1" class="img-shop" src="img/SPRITE_MILFO_1.png" alt="Imagen Milfo">
+                </button>
+                <button class="shop-item">
+                    <img class="img-shop" src="img/SPRITE_MILFO_2.png" alt="Imagen Milfo">
+                </button>
+                <button class="shop-item">
+                    <img class="img-shop" src="img/SPRITE_MILFO_3.png" alt="Imagen Milfo">
+                </button>
+                <button class="shop-item">
+                    <img class="img-shop" src="img/SPRITE_MILFO_4.png" alt="Imagen Milfo">
+                </button>
+                <button class="shop-item">
+                    <img class="img-shop" src="img/SPRITE_MILFO_5.png" alt="Imagen Milfo">
+                </button>
+                <button class="shop-item">
+                    <img class="img-shop" src="img/SPRITE_MILFO_1.png" alt="Imagen Milfo">
+                </button>
+                <button class="shop-item">
+                    <img class="img-shop" src="img/SPRITE_MILFO_1.png" alt="Imagen Milfo">
+                </button>
+                <button class="shop-item">
+                    <img class="img-shop" src="img/SPRITE_MILFO_1.png" alt="Imagen Milfo">
+                </button>
+            </div>
             <div class="buy-drop"></div>
             <div class="buy-drop"></div>
             <div class="buy-drop"></div>
@@ -42,4 +93,5 @@
         </section>
     </main>
 </body>
+<script src="js/contador.js"></script>
 </html>
