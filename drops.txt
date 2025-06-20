@@ -1,0 +1,71 @@
+001 - 
+    coste: 100
+    produccion: 0.5 m/s
+    mejoraPrecio: x1.15
+    mejoraCantidad: x2
+
+002 - 
+    coste: 1000
+    produccion: 6 m/s
+    mejoraPrecio: x1.15
+    mejoraCantidad: x2
+
+003 - 
+    coste: 8000
+    produccion: 32 m/s
+    mejoraPrecio: x1.15
+    mejoraCantidad: x2
+
+004 - 
+    coste: 22000
+    produccion: 102 m/s
+    mejoraPrecio: x1.15
+    mejoraCantidad: x2
+
+005 - 
+    coste: 114000
+    produccion: 564 m/s
+    mejoraPrecio: x1.15
+    mejoraCantidad: x2
+
+006 - 
+    coste: 1.8m
+    produccion: 1660 m/s
+    mejoraPrecio: x1.15
+    mejoraCantidad: x2
+
+007 - 
+    coste: 21m
+    produccion: 12210 m/s
+    mejoraPrecio: x1.15
+    mejoraCantidad: x2
+
+008 - 
+    coste: 430m
+    produccion: 63200 m/s
+    mejoraPrecio: x1.15
+    mejoraCantidad: x2
+
+009 - 
+    coste: 6.9b
+    produccion: 319000 m/s
+    mejoraPrecio: x1.15
+    mejoraCantidad: x2
+
+010 - 
+    coste: 69b
+    produccion: 1690000 m/s
+    mejoraPrecio: x1.15
+    mejoraCantidad: x2
+
+011 - 
+    coste: 69b
+    produccion: 1690000 m/s
+    mejoraPrecio: x1.15
+    mejoraCantidad: x2
+
+
+
+Características:
+-Puedes previsualizar la imagen del proximo drop, los demas te saldrá la imagen bloqueada, solo precio
+-Cada compra y mejora será una producción de ese drop, si tengo tres 001, será el valor de por segundo x 3

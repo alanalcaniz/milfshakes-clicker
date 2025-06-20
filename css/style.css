@@ -17,7 +17,7 @@ body{
 
 main{
     display: grid;
-    grid-template-columns: 3fr 5fr 1.8fr;
+    grid-template-columns: 2.4fr 5fr 2fr;
     grid-template-rows: 30px auto auto 120px;
     height: 100vh;
 }
@@ -50,44 +50,70 @@ main{
 
 .div-levels{
     min-width: 300px;
-    width: 80%;
-    margin: 13px 30px;
-    background-color: white; 
-    border-radius: 20px;
+    width: 90%;
+    margin: 8px 10px;
+    background-color: white;
     position: relative;
     display: flex;
     flex-flow: column;
+    border: none;
+    border-bottom: 5px solid #FFB9B9;
+    transition: background-color .2s ease, border .2s ease, color .2s ease;
+}
+
+.drop-blocked{
+    z-index: 5; 
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(70, 11, 11, 0.795); 
+    position: absolute; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: "Geologica", sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+}
+
+.drop-blocked img{
+    height: 50px;
+}
+
+.dropBought{
+    display: none;
 }
 
 .level{
     height: 80px;
     width: 80px;
     position: absolute;
-    left: 87%;
-    top: -20px;
+    left: 82%;
+    top: -3px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: red;
+    color: rgb(255, 255, 255);
     font-size: 18px;
-    background: white;
+    background: var(--red-milfshakes);
+    border-top: 3px solid white;
     border-radius: 20px;
-    border: 2px solid black;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     font-family: "Geologica", sans-serif;
     font-weight: 700;
+    clip-path: polygon(20% 0%, 80% 0%, 80% 100%, 50% 80%, 20% 100%);
+    transition: height .3s ease;
+    z-index: 10;
 }
 
 .drop_img{
     width: auto;
     height: 70%;
     background-color: aqua;
-    margin: 15px 10px 10px 10px;
+    margin: 15px 10px 5px 10px;
     overflow: hidden;
-    border-radius: 16px;
-    outline: 2px solid rgb(54, 54, 54);
 }
 
 .drop_img img{
@@ -95,14 +121,21 @@ main{
     width: 100%;
 }
 
-.drop_img:hover img{
-    transform: scale(1.05);
+.div-levels:hover{
+    background-color: #d8d8d8;
+    border-bottom: 5px solid #b3b3b3;
+    color: red;
+}
+
+.div-levels:hover .level{
+    height: 100px;
 }
 
 .drop_names{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    padding: 0 10px;
     color: red;
     font-size: 18px;
     font-family: "Geologica", sans-serif;
@@ -115,9 +148,21 @@ main{
     display: flex;
     position: relative;
     overflow: hidden;
+    justify-content: center;
 }
 
 /* imagenes milfo */
+#divError{
+    position: absolute;
+    z-index: 110;
+    color: white;
+    background-color: var(--rojo-oscuro);
+    display: none;
+    height: fit-content;
+    top: 80%;
+    padding: 10px;
+}
+
 .milfo-img{
     object-fit: cover;
     height: 100vh;
@@ -127,16 +172,68 @@ main{
 
 .milfo-img-1{
     z-index: 60;
+    animation: subirBajar1 4s infinite ease-in-out
 }
 
 .milfo-img-2{
     z-index: 50;
     transition: transform .3s ease;
+    animation: subirBajar2 4s infinite ease-in-out
 }
 
 .milfo-img-3{
     z-index: 40;
+    animation: subirBajar3 4s infinite ease-in-out
 }
+
+.milfo-img-4{
+    animation: subirBajar4 4s infinite ease-in-out
+}
+
+.milfo-img-5{
+    animation: subirBajar5 4s infinite ease-in-out
+}
+
+.milfo-img-6{
+    animation: subirBajar6 4s infinite ease-in-out
+}
+
+@keyframes subirBajar1 {
+      0%   { top: 0; }
+      50%  { top: 4px; }
+      100% { top: 0; }
+    }
+
+@keyframes subirBajar2 {
+      0%   { top: 7px; }
+      50%  { top: 0px; }
+      100% { top: 7px; }
+    }
+
+@keyframes subirBajar3 {
+      0%   { top: 0; }
+      50%  { top: 10px; }
+      100% { top: 0; }
+    }
+
+@keyframes subirBajar4 {
+      0%   { top: 0; }
+      50%  { top: -10px; }
+      100% { top: 0; }
+    }
+
+@keyframes subirBajar5 {
+      0%   { top: -10px; }
+      50%  { top: 0; }
+      100% { top: -10px; }
+    }
+
+@keyframes subirBajar6 {
+      0%   { top: 0; }
+      50%  { top: 10px; }
+      100% { top: 0; }
+    }
+    
 
 /* fin imagenes milfo */
 
@@ -163,9 +260,6 @@ main{
     margin-top: 60px;
     width: 60%;
 }
-.section-milfo:hover .milfo-img-2{
-    transform: scale(1.03);
-}
 
 .section-points{
     grid-area: 4/2/5/3;
@@ -181,18 +275,17 @@ main{
 }
 
 .counter{
-    width: 80%;
-    height: 90%;
-    background-color: var(--red-milfshakes);
-    border: 3px solid var(--white-shake);
-    outline: 3px solid var(--red-milfshakes);
-    border-radius: 20px;
+    width: 100%;
+    height: 80%;
+    background-color: var(--rojo-oscuro);
+    font-weight: 700;
     display: flex;
     align-items: center;
     font-size: 25px;
     color: white;
     justify-content: center;
     align-items: center;
+    align-self: end;
 }
 
 .section-level-up{
